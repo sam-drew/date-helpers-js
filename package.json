@@ -1,0 +1,9 @@
+{
+  "name": "date-helpers",
+  "version": "1.0.0",
+  "description": "Making wrangling Date objects a little easier.",
+  "main": "index.js",
+  "repository": "https://github.com/sam-drew/date-helpers-js.git",
+  "author": "Sam Drew <sam-drew@outlook.com>",
+  "license": "MIT"
+}
