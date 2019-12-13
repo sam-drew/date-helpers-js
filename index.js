@@ -15,7 +15,8 @@ export function getHalfwayDate(date1, date2) {
     return(new Date(diff));
 };
 
-// Get the decimal of the week that is left.
+// For week functions at the moment, sunday is assumed to be the first day of the week.
+// Get the decimal of the week that is remaining.
 export function getWeekRemaining(date) {
     const currentDay = date.getDay();
     const daysLeft = (7 - currentDay);
@@ -24,3 +25,12 @@ export function getWeekRemaining(date) {
     const amountLeft = (diff / (1000 * 60 * 60 * 24 * 7));
     return(amountLeft);
 };
+
+// Get the decimal of the week that has elapsed.
+export function getWeekElapsed(date) {
+    const daysElapsed = date.getDay();
+    const startOfWeek = new Date(date.getFullYear(), date.getMonth(), (date.getDate() - date.getDay());
+    const diff = (date - startOfWeek);
+    const amountElapsed = (diff / (1000 * 60 * 60 * 24 * 7));
+    return(amountElapsed);
+}
