@@ -37,5 +37,5 @@ export function getWeekElapsed(date) {
 // Get the Date at the halfway point of a week in which a given date exists.
 export function getHalfwayOfWeek(date) {
     const startOfWeek = new Date(date.getFullYear(), date.getMonth(), (date.getDate() - date.getDay()));
-    return(new Date(startOfWeek.getFullYear(), startOfWeek.getMonth(), (startOfWeek.getDate() + 3.5)));
+    return(new Date((startOfWeek + (1000 * 60 * 60 * 24 * 3.5))));
 };
